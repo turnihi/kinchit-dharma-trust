@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SBBG Yatra 2026 – Travel Details Form</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,500;7..72,600;7..72,700&family=Nunito+Sans:ital,opsz,wght@0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;1,6..12,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-bg" aria-hidden="true"></div>
+
+  <main class="page">
+    <header class="form-header">
+      
+      <h1 class="form-brand">Srimad Bhagavata Bhagavad Gita Yatra 2026</h1>
+      <p class="form-subtitle">Travel Details Form</p>
+      <p class="form-intro">
+        Please fill out the form below to submit your Onward and Return journey details of Srimad Bhagavata Bhagavad Gita Yatra 2026:
+        <br /><br />
+        <strong>Traveling together:</strong> If all yatris under one application are traveling together, submit this form only once using the primary registered mobile number.
+        <br /><br />
+        <strong>Traveling separately:</strong> If yatris in the same application are using different modes of travel or timings, please submit a separate form for each yatri by entering their individual name.
+      </p>
+    </header>
+
+    <form id="sbbg-travel-form" class="travel-form" novalidate>
+      <section class="form-section" id="contact-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading" class="section-title">Yatra Registration Details</h2>
+
+        <div class="field-group">
+          <label for="registeredMobile" class="field-label">
+            Applicant's Primary Registered Mobile Number (PRMN): <span class="required" aria-hidden="true">*</span>
+          </label>
+          <p class="field-hint">
+            <br />
+            <strong>KINDLY NOTE:</strong> Applicants are only permitted with "PRMN" to check and fill up the travel details of every individual Yatri under the application. Individual Yatris are not given access here.
+          </p>
+          <input
+            type="tel"
+            id="registeredMobile"
+            name="registeredMobile"
+            class="field-input"
+            inputmode="numeric"
+            autocomplete="tel-national"
+            placeholder="e.g. 9876543210"
+            maxlength="15"
+            required
+            aria-describedby="phone-status passenger-result"
+          />
+          <div id="phone-status" class="phone-status" role="status" aria-live="polite"></div>
+          <div id="passenger-result" class="passenger-result" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <div id="verified-details" class="is-hidden">
+        <div class="field-group">
+          <label for="emailAddress" class="field-label">Email Address</label>
+          <p class="field-hint">
+            Please enter your email address to receive a copy of this form submission.
+          </p>
+          <input
+            type="email"
+            id="emailAddress"
+            name="emailAddress"
+            class="field-input"
+            autocomplete="email"
+          />
+          <p class="field-error"></p>
+        </div>
+
+      <div id="common-yatrikas-list" class="included-list is-hidden"></div>
+
+      <div id="default-travel-block" class="travel-block" data-form-prefix="group" data-form-mode="single">
+        <div class="journey-panel" data-direction="onward" data-prefix="group">
+          <h2 class="subsection-title">Enter Your Onward Journey Details</h2>
+          <div class="field-group">
+            <label class="field-label" for="group-onwardTravelMode">
+              Onward Travel Mode <span class="required">*</span>
+            </label>
+            <select
+              id="group-onwardTravelMode"
+              name="group-onwardTravelMode"
+              class="field-select travel-mode-select"
+              data-direction="onward"
+              data-prefix="group"
+              required
+            >
+              <option value="">Please select</option>
+              <option value="train">Train</option>
+              <option value="flight">Flight</option>
+              <option value="own">Own</option>
+            </select>
+            <p class="field-error"></p>
+          </div>
+
+          <div class="mode-fields is-hidden" data-mode-panel="own" data-direction="onward" data-prefix="group">
+            <p class="field-note">
+              Those who are arriving on their own will have to directly come to the <strong>accomodation in Kurukshetra</strong>. The accommodation detail will be given by bus volunteer on 24th October. Those who are coming <strong>before 10 am on 24th October to New Delhi</strong> can select the matching time slots in Railway Stations. If you don't come on time, you will have to make your own arrangement to come to Kurukshetra.
+            </p>
+          </div>
+
+          <div class="mode-fields is-hidden" data-mode-panel="train" data-direction="onward" data-prefix="group">
+            <div class="field-group">
+              <label class="field-label" for="group-onwardTrain">
+                Train Number &amp; Name <span class="required">*</span>
+              </label>
+              <select
+                id="group-onwardTrain"
+                name="group-onwardTrain"
+                class="field-select train-select"
+                data-direction="onward"
+                data-prefix="group"
+              >
+                <option value="">Please select</option>
+                <option value="12433">12433 – MAS NZM RAJ</option>
+                <option value="12269">12269 – MAS NZM DUR</option>
+                <option value="12615">12615 – GT EXP</option>
+                <option value="12621">12621 – TN SF EXP</option>
+                <option value="12625">12625 – KERALA EXP</option>
+                <option value="12627">12627 – KARNATAKA EXP</option>
+                <option value="22691">22691 – BLR RAJ</option>
+                <option value="12925">12925 – PASCHIM EXP</option>
+              </select>
+              <p class="field-error"></p>
+            </div>
+            <div id="group-onwardTrainInfo" class="train-info is-hidden" data-train-info="onward" data-prefix="group"></div>
+          </div>
+
+          <div class="mode-fields is-hidden" data-mode-panel="flight" data-direction="onward" data-prefix="group">
+            <p class="field-note">
+              <strong>Kindly note:</strong> As mentioned in the form, flights arriving within the given time slots only will be accepted in the fields below. Those arriving by other timings to enter details under “own” in Travel mode above
+            </p>
+            <div class="field-group">
+              <label class="field-label" for="group-onwardFlightNumber">
+                Flight Number & Name of Airways <span class="required">*</span>
+              </label>
+              <input type="text" id="group-onwardFlightNumber" name="group-onwardFlightNumber" class="field-input" autocomplete="off" />
+              <p class="field-error"></p>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="group-onwardFlightDestination">
+                Arrival Destination <span class="required">*</span>
+              </label>
+              <select id="group-onwardFlightDestination" name="group-onwardFlightDestination" class="field-select onward-destination-select">
+                <option value="">Please select</option>
+                <option value="New Delhi">New Delhi</option>
+                <option value="Ghaziabad">Ghaziabad</option>
+                <option value="Noida">Noida</option>
+              </select>
+              <p class="field-error"></p>
+              <p class="field-note pickup-note is-hidden">
+                Those who are arriving at <strong>Ghaziabad</strong> and <strong>Noida</strong> must come to any of the <strong>pick up points in New Delhi</strong>
+              </p>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="group-onwardFlightDate">
+                Arrival Date <span class="required">*</span>
+              </label>
+              <select id="group-onwardFlightDate" name="group-onwardFlightDate" class="field-select">
+                <option value="">Please select</option>
+                <option value="24-Oct-2026">24-Oct-2026</option>
+              </select>
+              <p class="field-error"></p>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="group-onwardFlightTime">
+                Arrival Hours <span class="required">*</span>
+              </label>
+              <select id="group-onwardFlightTime" name="group-onwardFlightTime" class="field-select">
+                <option value="">Please select</option>
+                <option value="12.00-13.00">12.00 to 13.00 hrs</option>
+                <option value="13.01-14.00">13.01 to 14.00 hrs</option>
+                <option value="14.01-15.00">14.01 to 15.00 hrs</option>
+                <option value="15.01-16.00">15.01 to 16.00 hrs</option>
+                <option value="16.01-17.00">16.01 to 17.00 hrs</option>
+                <option value="17.01-18.00">17.01 to 18.00 hrs</option>
+                <option value="18.01-19.00">18.01 to 19.00 hrs</option>
+                <option value="19.01-20.00">19.01 to 20.00 hrs</option>
+                <option value="20.01-21.00">20.01 to 21.00 hrs</option>
+                <option value="21.00-22.00">21.00 to 22.00 hrs</option>
+              </select>
+              <p class="field-error"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="journey-panel" data-direction="return" data-prefix="group">
+          <h2 class="subsection-title">Enter Your Return Journey Details</h2>
+          <div class="field-group">
+            <label class="field-label" for="group-returnTravelMode">
+              Return Travel Mode <span class="required">*</span>
+            </label>
+            <select
+              id="group-returnTravelMode"
+              name="group-returnTravelMode"
+              class="field-select travel-mode-select"
+              data-direction="return"
+              data-prefix="group"
+              required
+            >
+              <option value="">Please select</option>
+              <option value="train">Train</option>
+              <option value="flight-own-drop">Flight – Will make own arrangement for drop</option>
+              <option value="flight-trust-drop">Flight - Trust to arrange to drop at an additional cost of Rs.500/- per each</option>
+              <option value="own">Own</option>
+            </select>
+            <p class="field-error"></p>
+            <p class="field-note trust-drop-note is-hidden">
+              Trust will arrange drop for flights departing from <strong>New Delhi</strong> or <strong>Noida airports</strong> after <strong>6 pm only</strong>. Those departing from <strong>Ghaziabad airport</strong> have to make their <strong>own arrangements</strong> from Delhi airport.
+            </p>
+          </div>
+
+          <div class="mode-fields is-hidden" data-mode-panel="train" data-direction="return" data-prefix="group">
+            <div class="field-group">
+              <label class="field-label" for="group-returnTrain">
+                Train Number &amp; Name <span class="required">*</span>
+              </label>
+              <select
+                id="group-returnTrain"
+                name="group-returnTrain"
+                class="field-select train-select"
+                data-direction="return"
+                data-prefix="group"
+              >
+                <option value="">Please select</option>
+                <option value="12190">12190 – MAHAKAUSHAL EXP (TO BOARD 12270 / MAS DURONTO AT GWALIOR)</option>
+                <option value="16032">16032 – ANDAMAN EXP</option>
+                <option value="12616">12616 – GT EXP</option>
+                <option value="12622">12622 – TN SF EXP</option>
+                <option value="12626">12626 – KERALA EXP</option>
+                <option value="12628">12628 – KARNATAKA EXP</option>
+                <option value="22692">22692 – BLR RAJ</option>
+                <option value="12472">12472 – SWARAJ EXP</option>
+              </select>
+              <p class="field-error"></p>
+            </div>
+            <div id="group-returnTrainInfo" class="train-info is-hidden" data-train-info="return" data-prefix="group"></div>
+          </div>
+
+          <div class="mode-fields is-hidden" data-mode-panel="flight" data-direction="return" data-prefix="group">
+            <div class="field-group">
+              <label class="field-label" for="group-returnFlightNumber">
+                Flight Number & Name of Airways <span class="required">*</span>
+              </label>
+              <input type="text" id="group-returnFlightNumber" name="group-returnFlightNumber" class="field-input" autocomplete="off" />
+              <p class="field-error"></p>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="group-returnFlightDestination">
+                Departure Airport <span class="required">*</span>
+              </label>
+              <select id="group-returnFlightDestination" name="group-returnFlightDestination" class="field-select">
+                <option value="">Please select</option>
+                <option value="New Delhi">New Delhi</option>
+              </select>
+              <p class="field-error"></p>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="group-returnFlightDate">
+                Departure Date <span class="required">*</span>
+              </label>
+              <select id="group-returnFlightDate" name="group-returnFlightDate" class="field-select">
+                <option value="">Please select</option>
+                <option value="31-Oct-2026">31-Oct-2026</option>
+              </select>
+              <p class="field-error"></p>
+            </div>
+            <div class="field-group">
+              <label class="field-label" for="group-returnFlightTime">
+                Departure Hours <span class="required">*</span>
+              </label>
+              <select id="group-returnFlightTime" name="group-returnFlightTime" class="field-select">
+                <option value="">Please select</option>
+                <option value="12.00-13.00">12.00 to 13.00 hrs</option>
+                <option value="13.01-14.00">13.01 to 14.00 hrs</option>
+                <option value="14.01-15.00">14.01 to 15.00 hrs</option>
+                <option value="15.01-16.00">15.01 to 16.00 hrs</option>
+                <option value="16.01-17.00">16.01 to 17.00 hrs</option>
+                <option value="17.01-18.00">17.01 to 18.00 hrs</option>
+                <option value="18.01-19.00">18.01 to 19.00 hrs</option>
+                <option value="19.01-20.00">19.01 to 20.00 hrs</option>
+                <option value="20.01-21.00">20.01 to 21.00 hrs</option>
+                <option value="21.00-22.00">21.00 to 22.00 hrs</option>
+              </select>
+              <p class="field-error"></p>
+            </div>
+            <p class="field-note">
+              Yatris traveling by Flights have to make their own arrangement to reach New Delhi Airport. Or if they inform Trust in advance, they will be dropped by the Trust by collecting additional charge.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <section id="travel-details-host" class="travel-details-host" aria-live="polite"></section>
+
+      <div id="form-message" class="form-message is-hidden" role="alert"></div>
+
+      <div id="submit-row" class="submit-row">
+        <button type="submit" id="submitBtn" class="btn-submit">Submit</button>
+      </div>
+      </div>
+    </form>
+
+    <div id="success-panel" class="success-panel is-hidden" role="status" aria-live="polite">
+      <div class="success-card">
+        <div class="success-icon" aria-hidden="true">✓</div>
+        <h2 class="success-title" id="success-title">Travel details submitted successfully.</h2>
+        <p class="success-id" id="success-submission-id"></p>
+        <p class="success-body" id="success-body">
+          Thank you. Your travel details for Srimad Bhagavata Bhagavad Gita Yatra 2026
+          have been recorded.
+        </p>
+        <button type="button" id="submit-another" class="btn-secondary">Submit another response</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="passengers-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
