@@ -3013,29 +3013,29 @@ window.PASSENGER_DATA = [
     "applicationNumber": "SBBG 2026/NVLY/0167",
     "registrationNumber": "SBBG 2026/NVLY/0167-0441",
     "name": "Sridharan T",
-    "phone": "+918925602225",
-    "normalizedPhone": "8925602225"
+    "phone": "+918925650225",
+    "normalizedPhone": "8925650225"
   },
   {
     "applicationNumber": "SBBG 2026/NVLY/0167",
     "registrationNumber": "SBBG 2026/NVLY/0167-0442",
     "name": "Sowmya T",
-    "phone": "+918925602225",
-    "normalizedPhone": "8925602225"
+    "phone": "+918925650225",
+    "normalizedPhone": "8925650225"
   },
   {
     "applicationNumber": "SBBG 2026/NVLY/0167",
     "registrationNumber": "SBBG 2026/NVLY/0167-0443",
     "name": "Srinivasan S",
-    "phone": "+918925602225",
-    "normalizedPhone": "8925602225"
+    "phone": "+918925650225",
+    "normalizedPhone": "8925650225"
   },
   {
     "applicationNumber": "SBBG 2026/NVLY/0167",
     "registrationNumber": "SBBG 2026/NVLY/0167-0444",
     "name": "Sujatha S",
-    "phone": "+918925602225",
-    "normalizedPhone": "8925602225"
+    "phone": "+918925650225",
+    "normalizedPhone": "8925650225"
   },
   {
     "applicationNumber": "SBBG 2026/CHN/0168",
