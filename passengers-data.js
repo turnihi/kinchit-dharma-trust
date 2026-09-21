@@ -6877,8 +6877,8 @@ window.PASSENGER_DATA = [
     "applicationNumber": "SBBG 2026/TPR/0399",
     "registrationNumber": "SBBG 2026/TPR/0399-1000",
     "name": "Aprana J",
-    "phone": "+919442919847",
-    "normalizedPhone": "9442919847"
+    "phone": "+917540019847",
+    "normalizedPhone": "7540019847"
   },
   {
     "applicationNumber": "SBBG 2026/MDU/0400",
@@ -9670,8 +9670,8 @@ window.PASSENGER_DATA = [
     "applicationNumber": "SBBG 2026/USA/0583",
     "registrationNumber": "SBBG 2026/USA/0583-1400",
     "name": "Suresh Dhandapani",
-    "phone": "+917032685264",
-    "normalizedPhone": "7032685264"
+    "phone": "+17032635264",
+    "normalizedPhone": "7032635264"
   },
   {
     "applicationNumber": "SBBG 2026/CHN/0584",
